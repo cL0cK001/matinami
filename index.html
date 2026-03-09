@@ -103,10 +103,7 @@
             function (xhr) {
                 if (xhr.lengthComputable) {
                     const percentComplete = Math.round((xhr.loaded / xhr.total) * 100);
-                    if(percentComplete > 100){
-                        percentComplete = 100;
-                    }
-                    loadingScreen.innerText = `読み込み中... ${percentComplete}%`;
+                    loadingScreen.innerText = `読み込み中...`;
                 } else {
                     // サーバーの設定等で全体量が分からない場合は文字だけ表示
                     loadingScreen.innerText = '読み込み中...';
